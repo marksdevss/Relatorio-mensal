@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceManager</title>
+    <link rel="stylesheet" href="financas.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FinanceManager</div>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#transacoes">Transações</a></li>
+                <li><a href="#relatorios">Relatórios</a></li>
+                <li><a href="#orcamentos">Orçamentos</a></li>
+                <li><a href="#configuracoes">Configurações</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile">
+            <img src="user-avatar.png" alt="Avatar do usuário">
+            <span>Usuário</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>Resumo Financeiro</h2>
+            <div class="financial-summary">
+                <div class="card">
+                    <h3>Receitas</h3>
+                    <p id="total-receitas">R$ 0,00</p>
+                </div>
+                <div class="card">
+                    <h3>Despesas</h3>
+                    <p id="total-despesas">R$ 0,00</p>
+                </div>
+                <div class="card">
+                    <h3>Saldo Atual</h3>
+                    <p id="saldo-atual">R$ 0,00</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="transacoes">
+            <h2>Transações</h2>
+            <form id="transacao-form">
+                <input type="text" id="descricao" placeholder="Descrição">
+                <input type="number" id="valor" placeholder="Valor">
+                <select id="tipo">
+                    <option value="receita">Receita</option>
+                    <option value="despesa">Despesa</option>
+                </select>
+                <button type="submit">Adicionar Transação</button>
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-transacoes">
+                    <!-- As transações serão listadas aqui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="financas.js"></script>
+</body>
+</html>
